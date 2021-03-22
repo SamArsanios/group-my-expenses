@@ -4,12 +4,12 @@ class SessionsController < ApplicationController
     def create
         @user = User.find_by(name: params[:session][:name])
         if @user&.authenticate(params[:session])
-        log_in @user
-        flash[:success] = ['Successful Login']
-        redirect_to @user
+            log_in @user
+            flash[:success] = ['Successful Login']
+            redirect_to @user
         else
-        flash.now[:danger] = ["User doesn't exist"]
-        render 'new'
+            flash.now[:danger] = ["User doesn't exist"]
+            render 'new'
         end
     end
 
