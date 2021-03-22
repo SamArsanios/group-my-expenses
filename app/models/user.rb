@@ -1,7 +1,8 @@
 class User < ApplicationRecord
     has_many :expenses, foreign_key: 'author_id', dependent: :destroy
     has_many :groups, dependent: :destroy
-    validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 100 }
+    
+    validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 30 }
     has_one_attached :avatar, dependent: :destroy
     validates :avatar, blob: { content_type: :image }
   
