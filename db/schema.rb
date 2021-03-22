@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_22_052129) do
+ActiveRecord::Schema.define(version: 2021_03_22_053310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 2021_03_22_052129) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_expenses_on_author_id"
+  end
+
+  create_table "expenses_groups", force: :cascade do |t|
+    t.bigint "expense_id", null: false
+    t.bigint "group_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["expense_id"], name: "index_expenses_groups_on_expense_id"
+    t.index ["group_id"], name: "index_expenses_groups_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -39,5 +48,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_052129) do
     t.index ["name"], name: "index_users_on_name"
   end
 
+  add_foreign_key "expenses_groups", "expenses"
+  add_foreign_key "expenses_groups", "groups"
   add_foreign_key "groups", "users"
 end
