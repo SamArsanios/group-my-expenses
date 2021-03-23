@@ -7,7 +7,7 @@ class User < ApplicationRecord
     validates :avatar, blob: { content_type: :image }
   
     # Returns resized image
-    # def display_image
-    #   avatar.variant(resize_to_limit: [500, 500])
-    # end
+    def display_image
+      avatar.variant(resize_to_limit: [500, 500])
+    end
 end
