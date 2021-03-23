@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :groups, only: %i[index new create show]
   get 'signup', to: 'users#new'
   get 'expenses/index_no_group', to: 'expenses#index_no_group'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 end
