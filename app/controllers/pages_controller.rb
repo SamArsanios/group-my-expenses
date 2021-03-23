@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
-    def home
-        return unless logged_in?
-    
-        redirect_to current_user
-    end
+  def home
+    return unless logged_in?
+
+    redirect_to current_user
+  end
 end
