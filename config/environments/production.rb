@@ -37,9 +37,11 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   # config.active_storage.service = :local
+
   # Store uploaded files on the cloudinary file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
 
+  CLOUDINARY_URL="cloudinary://677957218387247:1V136ij22eN8rgIHjUvlxgfz8C8@dxc1u5evw"
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
