@@ -13,5 +13,5 @@ RSpec.describe GroupsHelper, type: :helper do
       @group.icon.attach(io: File.open('spec/test.png'), filename: 'test.png', content_type: 'image/png')
       expect(display_icon(@group)).not_to eq(image_tag('default-group-icon.png', class: 'group-img'))
     end
-end
+  end
 end
