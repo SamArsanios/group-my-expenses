@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
         group.user_id = current_user.id
 
         if group.save
-            flash[:success] = ['Group Added']
+            flash[:success] = ['Group has been Added!']
             redirect_to groups_path
         else
             flash[:danger] = group.errors.full_messages
