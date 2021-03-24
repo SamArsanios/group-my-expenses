@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe SessionsHelper, type: :helper do
   describe 'current user' do
     before(:example) do
-      @user = User.create(name: 'test_user')
+      @user = User.create(name: 'user1')
     end
     it 'returns current user' do
       log_in(@user)

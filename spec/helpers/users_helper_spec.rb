@@ -9,7 +9,7 @@ RSpec.describe UsersHelper, type: :helper do
       expect(display_avatar(@user)).to eq(image_tag('default-avatar.png', class: 'avatar rounded-circle'))
     end
     it 'displays custom avatar if avatar is provided' do
-      @user.avatar.attach(io: File.open('spec/test.png'), filename: 'test.png', content_type: 'image/png')
+      @user.avatar.attach(io: File.open('spec/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
       expect(display_avatar(@user)).not_to eq(image_tag('default-avatar.png', class: 'avatar rounded-circle'))
     end
   end
