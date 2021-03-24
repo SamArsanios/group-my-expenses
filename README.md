@@ -2,9 +2,9 @@
 
 > Group My Expenses is a web application that allows you to keep track of your expenses and group them in categories.
 
-![App Screenshot](./screenshot-1.jpg)
-![App Screenshot](./screenshot-2.jpg)
-![App Screenshot](./screenshot-3.jpg)
+![App Screenshot](../../app/assets/images)
+![App Screenshot](../../app/assets/images)
+![App Screenshot](../../app/assets/images)
 
 
 The application has the following features:
