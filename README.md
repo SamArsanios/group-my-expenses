@@ -26,7 +26,7 @@ The application has the following features:
 
 ## Live Demo
 
-[Group My Expenses](https://group-payments.herokuapp.com/)
+[Group My Expenses](https://group-my-expenses.herokuapp.com/)
 
 ### Test account
 
@@ -58,7 +58,7 @@ RSpec was used for testing and several test use cases have been created. To test
 
 ## Authors
 
-👤 **Meron Ogbai**
+👤 **Samson Kibrom**
 
 - Github: [@SamArsanios](https://github.com/SamArsanios)
 - Twitter: [@SamArsanios](https://twitter.com/SamArsanios)
