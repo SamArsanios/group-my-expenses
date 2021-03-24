@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     expect(user.valid?).to be false
   end
 
-  it "does not validate user if name already exists" do
+  it 'does not validate user if name already exists' do
     User.create!(name: 'user1')
     user = User.new(name: 'user1')
     expect(user.valid?).to be false
