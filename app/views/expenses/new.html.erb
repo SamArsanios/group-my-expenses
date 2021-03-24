@@ -15,7 +15,7 @@
         </div>
         <%= form.collection_select(:group_id, Group.all, :id, :name, {include_blank: true}, {class: 'custom-select'}) %>
       </div>
-      <%= form.submit 'Submit Expense', class: 'btn btn-primary mt-3 p-3' %>
+      <%= form.submit 'Submit Expense', class: 'btn btn-dark mt-3 px-5' %>
     <% end %>
   </div>
 </div>
