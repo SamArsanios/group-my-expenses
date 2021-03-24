@@ -9,9 +9,9 @@
 <div class="d-flex justify-content-center mt-3">
   <%= will_paginate @expenses, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
-<div class="space-for-new">
+<div class="padding-for-new-entry">
   <%= render @expenses %>
 </div>
-<div class="bg-success py-3 fixed-bottom">
+<div class="bg-dark py-3 fixed-bottom">
   <%= link_to 'New Expense', new_expense_path, type: "button", class: "btn btn-outline-light w-75 mx-auto d-block py-3"%>
 </div>
