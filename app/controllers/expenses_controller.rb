@@ -7,7 +7,7 @@ class ExpensesController < ApplicationController
 
   def index
     @expenses = Expense.includes(groups: [icon_attachment: :blob]).paginate(page: params[:page], per_page: 3)
-      .where('author_id=?', current_user.id).joins(:groups)
+      .where('author_id=?', current_user.id).joins(:groups).order(:created_at)
   end
 
   def index_no_group
