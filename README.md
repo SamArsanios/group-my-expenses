@@ -43,14 +43,15 @@ To get a local copy up and running follow these simple steps.
 2. Clone the repository `git clone git@github.com:SamArsanios/group-my-expenses.git`
 3. Move into project directory `cd expenses`
 4. Install gems required for the project `bundle install`
-5. Create database `rails db:create`
-6. Run database migration `rails db:migrate`
-7. Start your server `rails server`
-8. Open the app on your browser by visiting the link `http://localhost:3000`
+5. Install yarn by typing `gem install yarn` or simply run `npm install --global yarn`
+6. Create database `rails db:create`
+7. Run database migration `rails db:migrate`
+8. Start your server `rails server`
+9. Open the app on your browser by visiting the link `http://localhost:3000`
 
 ### Testing
 
-RSpec was used for testing and several test use cases have been created. To test, simply follow the instructions below:
+RSpec was used for testing. To test, simply follow the instructions below:
 
 1. Open Terminal
 2. Confirm that you are in the root directory
