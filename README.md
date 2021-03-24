@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Open a Terminal
 2. Clone the repository `git clone git@github.com:SamArsanios/group-my-expenses.git`
-3. Move into project directory `cd group-payments`
+3. Move into project directory `cd expenses`
 4. Install gems required for the project `bundle install`
 5. Create database `rails db:create`
 6. Run database migration `rails db:migrate`
