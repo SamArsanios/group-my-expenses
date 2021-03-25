@@ -26,7 +26,7 @@ class ExpensesController < ApplicationController
       flash[:success] = ['Expense Added']
       redirect_to expenses_path
     else
-      flash[:danger] = expense.errors.full_messages
+      flash[:danger] = @expense.errors.full_messages
       redirect_back(fallback_location: new_expense_path)
     end
   end
