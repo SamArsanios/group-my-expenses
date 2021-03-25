@@ -29,13 +29,13 @@ gem 'image_processing', '~> 1.2'
 gem 'activestorage-validator'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap'
+gem 'bootstrap-multiselect-rails'
 gem 'cloudinary'
 gem 'jquery-rails'
 gem 'mini_magick'
+gem 'sprockets-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
-gem 'bootstrap-multiselect-rails'
-gem 'sprockets-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
