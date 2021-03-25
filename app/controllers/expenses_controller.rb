@@ -17,11 +17,12 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    expense = Expense.new(expense_params)
-    expense.author_id = current_user.id
-    if expense.save
-      group_id = params[:expense][:group_id]
-      ExpensesGroup.create(group_id: group_id, expense_id: expense.id) if group_id
+    @expense = Expense.new(expense_params)
+    @expense.author_id = current_user.id
+    ids = params[:expense][:group].reject { |c| c.empty? }
+    groups = Group.find(ids)
+    @expense.groups << groups
+    if @expense.save
       flash[:success] = ['Expense Added']
       redirect_to expenses_path
     else
