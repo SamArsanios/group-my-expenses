@@ -15,7 +15,19 @@
         </div>
         <%= form.collection_select(:group_id, Group.all, :id, :name, {include_blank: true}, {class: 'custom-select'}) %>
       </div>
-      <%= form.submit 'Submit Expense', class: 'btn btn-dark mt-3 px-5' %>
+
+       <div class="input-group my-3">
+        <div class="input-group-prepend">
+          <%= form.label :group_id, class: 'input-group-text' %>
+        </div>
+        <script type="text/javascript">
+              document.querySelector('#expense_group_id').multiselect();
+        </script> 
+      <!--  <%= form.collection_select(:group_id, Group.all, :id, :name, {:multiple=> true}) %> -->
+        <%= form.select :group, options_from_collection_for_select(Group.all, 'id', 'name'), { :multiple => true }%>
+      </div>
+      
+      <%= form.submit 'Submit Expense', class: 'btn btn-primary mt-3 px-5' %>
     <% end %>
   </div>
 </div>
