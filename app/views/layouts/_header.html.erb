@@ -6,6 +6,6 @@
     <%= yield(:title) %>
   </div>
   <div class="navbar-nav font-weight-bold">
-    <%= link_to('Logout', logout_path, method: 'delete', class: 'nav-link') if logged_in? %>
+    <%= logout_link %>
   </div>
 </nav>
