@@ -19,7 +19,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.author_id = current_user.id
-    ids = params[:expense][:group].reject { |c| c.empty? }
+    ids = params[:expense][:group].reject(&:empty?)
     groups = Group.find(ids)
     @expense.groups << groups
     if @expense.save
