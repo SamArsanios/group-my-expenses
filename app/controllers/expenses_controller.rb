@@ -17,11 +17,12 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    expense = Expense.new(expense_params)
-    expense.author_id = current_user.id
-    if expense.save
-      group_id = params[:expense][:group_id]
-      ExpensesGroup.create(group_id: group_id, expense_id: expense.id) if group_id
+    @expense = Expense.new(expense_params)
+    @expense.author_id = current_user.id
+    ids = params[:expense][:group].reject { |c| c.empty? }
+    groups = Group.find(ids)
+    @expense.groups << groups
+    if @expense.save
       flash[:success] = ['Expense Added']
       redirect_to expenses_path
     else
@@ -36,3 +37,20 @@ class ExpensesController < ApplicationController
     params.require(:expense).permit(:name, :amount)
   end
 end
+
+# def create
+#   expense = Expense.new(expense_params)
+#   expense.author_id = current_user.id
+#   if expense.save
+#     groups = params[:expense][:group]
+#     groups = groups[1..]
+#     groups.each do |group|
+#       ExpensesGroup.create(group_id: group, expense_id: expense.id)
+#     end
+#     flash[:success] = ['Expense Added']
+#     redirect_to expenses_path
+#   else
+#     flash[:danger] = expense.errors.full_messages
+#     redirect_back(fallback_location: new_expense_path)
+#   end
+# end
