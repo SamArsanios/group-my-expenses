@@ -13,7 +13,7 @@
         <div class="input-group-prepend">
           <%= form.label :group_id, class: 'input-group-text' %>
         </div>
-        <%= form.collection_select(:group_id, Group.all, :id, :name, {include_blank: true}, {class: 'custom-select'}) %>
+        <%= form.collection_select(:group, Group.all,:id, :name, {class: 'custom-select'}, {multiple: true}) %>
       </div>
       <%= form.submit 'Submit Expense', class: 'btn btn-primary mt-3 px-5' %>
     <% end %>
