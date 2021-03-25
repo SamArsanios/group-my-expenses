@@ -24,8 +24,9 @@
               document.querySelector('#expense_group_id').multiselect();
         </script> 
       <!--  <%= form.collection_select(:group_id, Group.all, :id, :name, {:multiple=> true}) %> -->
-        <%= form.select :group, options_from_collection_for_select(Group.all, 'id', 'name'), { :multiple => true }%>
-      </div>
+        <!--<%= form.select :group, options_from_collection_for_select(Group.all, 'id', 'name'), { :multiple => true }%> -->
+        <%= form.select :group, options_from_collection_for_select(Group.all,:id, :name), {class: 'custom-select'}, {multiple: true} %>
+        </div>
       
       <%= form.submit 'Submit Expense', class: 'btn btn-primary mt-3 px-5' %>
     <% end %>
