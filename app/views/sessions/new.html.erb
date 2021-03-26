@@ -1,0 +1,12 @@
+<% provide(:title, "Login") %>
+<%= render 'layouts/header'%>
+<div class="card my-3 text-center">
+  <div class="card-body px-5">
+    <%= form_with url: login_path, scope: :session, local: true do |form| %>
+      <div class="md-form mb-3">
+        <%= form.text_field :name, class: 'form-control', placeholder: 'Name'%>
+      </div>
+      <%= form.submit 'Login', class: 'btn btn-primary px-5 py-2 m-5' %>
+    <% end %>
+  </div>
+</div>

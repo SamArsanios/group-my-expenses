@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+@import 'bootstrap-multiselect';
+
+body {
+  background-color: #f5f6f8;
+  color: #434b54;
+  font-family: "Lato", sans-serif;
+}
+
+.padding-for-new-entry {
+  padding-bottom: 100px;
+}
