@@ -30,8 +30,7 @@ The application has the following features:
 
 ### Test account
 
-- Name: Admin
-- Or Sign Up and create your own account
+- Sign Up and create your own account
 
 ## Getting Started
 
